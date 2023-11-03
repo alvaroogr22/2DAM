@@ -9,7 +9,7 @@ public class ConectarDB {
 	public static void main(String[] args) {
 		Connection connect = null;
 		try {
-			connect = DriverManager.getConnection("jdbc:mysql://localhost:17770/phoneland", "root", "");
+			connect = DriverManager.getConnection("jdbc:mysql://localhost:17770/empresa", "root", "");
 			if (connect != null) {
 				System.out.println("La conexión se ha realizado correctamente");
 				connect.close();

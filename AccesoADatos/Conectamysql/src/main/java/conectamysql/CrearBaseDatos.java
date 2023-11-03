@@ -9,17 +9,17 @@ public class CrearBaseDatos {
 
 	public static void main(String[] args) {
 		Connection conn = null;
-		Statement stmt = null;
-		String sql = "CREATE DATABASE phoneland";
+		Statement cstmt = null;
+		String sql = "CREATE DATABASE empresa";
 		try {
 			conn = DriverManager.getConnection("jdbc:mysql://localhost:17770/", "root", "");
-			stmt = conn.createStatement();
+			cstmt = conn.createStatement();
 			// La creacion de un Statement en Java implica obtener una instanca a partir de
 			// un objeto connection
-			stmt.execute(sql);
+			cstmt.execute(sql);
 			System.out.println("Base de datos 'phoneland' ok");
 			conn.close();
-			stmt.close();
+			cstmt.close();
 		} catch (SQLException e) {
 			e.printStackTrace(); // Imprime informacion sobre la excepcion
 		}
