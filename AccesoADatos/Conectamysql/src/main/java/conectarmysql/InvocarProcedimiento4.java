@@ -1,4 +1,4 @@
-package conectamysql;
+package conectarmysql;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -12,7 +12,7 @@ public class InvocarProcedimiento4 {
         CallableStatement cstmt = null;
 
         try {
-			conn = DriverManager.getConnection("jdbc:mysql://localhost:17770/empresa", "root", "");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost/phonelandcenec", "root", "");
             double precio = 100.0;
 
             // Llamar al procedimiento almacenado

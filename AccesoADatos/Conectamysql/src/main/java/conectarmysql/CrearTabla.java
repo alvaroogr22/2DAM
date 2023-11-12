@@ -1,4 +1,4 @@
-package conectamysql;
+package conectarmysql;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -10,10 +10,14 @@ public class CrearTabla {
 	public static void main(String[] args) {
 		Connection conn = null;
 		Statement stmt = null;
-		String sql = "CREATE TABLE clientes (id INT PRIMARY KEY," + "nif VARCHAR(10) NOT NULL,"
-				+ "nombre VARCHAR(60) NOT NULL," + "edad VARCHAR (2))";
+		String sql = "CREATE TABLE productos (id INT PRIMARY KEY,"
+				+ "nombre VARCHAR(60) NOT NULL,"
+				+ "tipo_de_gama VARCHAR(40),"
+				+ "marca VARCHAR(20),"
+				+ "precio DOUBLE,"
+				+ "numero_de_serie VARCHAR(10))";
 		try {
-			conn = DriverManager.getConnection("jdbc:mysql://localhost:17770/empresa", "root", "");
+			conn = DriverManager.getConnection("jdbc:mysql://localhost:17770/simulacro", "root", "");
 			stmt = conn.createStatement();
 			stmt.execute(sql);
 			System.out.println("Tabla \"clientes\" creada correctamente");

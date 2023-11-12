@@ -1,14 +1,21 @@
-package conectamysql;
-
-import java.sql.*;
+package conectarmysql;
+import java.sql.CallableStatement;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.ResultSet;
 
 public class InvocarProcedimiento {
-public static void main(String[] args) {
+
+    public static void main(String[] args) {
         Connection conn = null;
+        //definimos un objeto callableStatement sirve para
+        //preparar la ejecución del procedimiento
         CallableStatement cstmt = null;
 
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:17770/empresa", "root", "");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost/empresa", "root", "");
+
             // Llamar al procedimiento almacenado
             cstmt = conn.prepareCall("call ObtenerClientes()");
 
@@ -17,6 +24,9 @@ public static void main(String[] args) {
 
             // Obtener los resultados si el procedimiento devuelve algo
             ResultSet rs = cstmt.getResultSet();
+            //en este bucle vamos mostrando por pantalla el 
+            // resultado de lo que hemos realizdao
+            
             while (rs.next()) {
                 int id = rs.getInt("id");
                 String nif = rs.getString("nif");
