@@ -57,14 +57,5 @@ public class Ventana5ConMetodosArrays3 extends JFrame {
     		ventana.agregarBoton(nombre,50,y);
     		y=y+50;
     	}
-    		
-    	
-    	
-    	
-    	
-    	
-    	
-    
-    
     }
 }
