@@ -1,4 +1,4 @@
-package modelovistacontrolador;
+package modelovistacontroladorsimulacro;
 
 public class Producto {
     private int id;

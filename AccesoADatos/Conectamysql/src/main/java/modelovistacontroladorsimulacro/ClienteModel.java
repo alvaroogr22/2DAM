@@ -1,4 +1,4 @@
-package modelovistacontrolador2;
+package modelovistacontroladorsimulacro;
 import java.util.List;
 
 import java.sql.Connection;
@@ -20,9 +20,9 @@ public class ClienteModel {
     }
 
     // Método para obtener todos los clientes de la base de datos y devolverlos como una lista
-    public List<Cliente> getAllClientes() throws SQLException {
-        List<Cliente> clientes = new ArrayList<>(); // Inicializa una lista para almacenar los clientes
-        PreparedStatement stmt = conn.prepareStatement("SELECT * FROM clientes"); // Crea una declaración SQL
+    public List<Producto> getAllProductos() throws SQLException {
+        List<Producto> productos = new ArrayList<>(); // Inicializa una lista para almacenar los clientes
+        PreparedStatement stmt = conn.prepareStatement("SELECT * FROM productos"); // Crea una declaración SQL
 
         // Ejecuta una consulta SQL para obtener todos los clientes de la tabla "clientes"
         ResultSet rs = stmt.executeQuery();
@@ -30,15 +30,17 @@ public class ClienteModel {
         // Itera a través de los resultados y crea objetos Cliente para cada fila
         while (rs.next()) {
             int id = rs.getInt("id");
-            String nif = rs.getString("nif");
             String nombre = rs.getString("nombre");
-            String edad = rs.getString("edad");
-            clientes.add(new Cliente(id, nif, nombre, edad)); // Agrega cada Cliente a la lista
+            String descripcion = rs.getString("descripcion");
+            String fabricante = rs.getString("fabricante");
+            Float precio = rs.getFloat("precio");
+            String numeroSerie = rs.getString("numero_serie");
+            productos.add(new Producto(id, nombre, descripcion, fabricante, precio, numeroSerie)); // Agrega cada Cliente a la lista
         }
 
         stmt.close(); // Cierra la declaración
         rs.close(); // Cierra el resultado
-        return clientes; // Devuelve la lista de clientes
+        return productos; // Devuelve la lista de clientes
     }
 
     // Método para cerrar la conexión a la base de datos

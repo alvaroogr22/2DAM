@@ -1,4 +1,4 @@
-package modelovistacontrolador2;
+package modelovistacontroladorphoneland;
 import java.util.List;
 import java.sql.*;
 
@@ -14,8 +14,8 @@ public class ClienteController {
 
     // Método para mostrar los clientes
     public void mostrarClientes() throws SQLException {
-        List<Cliente> clientes = model.getAllClientes(); // Obtiene la lista de clientes desde el modelo
-        view.mostrarClientes(clientes); // Muestra los clientes en la vista
+        List<Producto> productos = model.getAllProductos();// Obtiene la lista de clientes desde el modelo
+        view.mostrarProductos(productos); // Muestra los clientes en la vista
     }
 
     // Método para cerrar la conexión a la base de datos
