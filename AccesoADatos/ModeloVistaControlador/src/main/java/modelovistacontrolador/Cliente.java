@@ -1,4 +1,4 @@
-package modelovistacontrolador2;
+package modelovistacontrolador;
 
 public class Cliente {
     private int id;

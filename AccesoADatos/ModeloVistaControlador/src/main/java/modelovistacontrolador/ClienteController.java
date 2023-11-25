@@ -1,4 +1,4 @@
-package modelovistacontrolador2;
+package modelovistacontrolador;
 import java.util.List;
 import java.sql.*;
 
