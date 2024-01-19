@@ -1,5 +1,0 @@
-package EjerciciosBuclesYCondicionales
-
-fun main(){
-    
-}
