@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ExamenParcial</string>
+    <string name="entrar">ENTRAR</string>
+    <string name="cita_m_dica">CITA MÉDICA</string>
+</resources>
