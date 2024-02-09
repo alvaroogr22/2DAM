@@ -20,10 +20,9 @@ public class Citas {
 
 	@Column(name = "fecha")
 	private String fecha;
-	
+
 	@Column(name = "hora")
 	private String hora;
-
 
 	// Constructor por defecto requerido por Hibernate
 	public Citas() {
@@ -85,11 +84,11 @@ public class Citas {
 	public String toString() {
 		return "Cita{" +
 				"id=" + id +
-                ", id_paciente='" + id_paciente + '\'' +
-                ", id_medico='" + id_medico + '\'' +
-                ", fecha='" + fecha + '\'' +
-                ", hora='" + hora + '\'' +
+				", id_paciente='" + id_paciente + '\'' +
+				", id_medico='" + id_medico + '\'' +
+				", fecha='" + fecha + '\'' +
+				", hora='" + hora + '\'' +
 				'}';
 	}
-	
+
 }

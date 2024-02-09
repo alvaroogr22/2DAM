@@ -36,7 +36,8 @@ public class Pacientes {
     }
 
     // Constructor para crear un objeto de tipo Paciente con campos específicos
-    public Pacientes(String nombre, String apellidos, String ciudad, String direccion, String telefono, int edad, String historial) {
+    public Pacientes(String nombre, String apellidos, String ciudad, String direccion, String telefono, int edad,
+            String historial) {
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.ciudad = ciudad;

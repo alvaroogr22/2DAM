@@ -7,7 +7,7 @@ import org.hibernate.context.internal.ThreadLocalSessionContext;
 import org.hibernate.engine.spi.SessionFactoryImplementor;
 import org.hibernate.query.Query;
 
-public class BorrarRegistros {
+public class EliminarRegistros {
 
 	public static void borrarPaciente(int pacienteId) {
 		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
@@ -20,7 +20,7 @@ public class BorrarRegistros {
 
 			session.beginTransaction();
 
-			// Borrar paciente con el ID proporcionado
+			// Borrar paciente con el ID del paciente proporcionado
 			String deleteHql = "DELETE FROM Pacientes WHERE id = :pacienteId";
 			Query<?> deleteQuery = session.createQuery(deleteHql);
 			deleteQuery.setParameter("pacienteId", pacienteId);
@@ -41,6 +41,7 @@ public class BorrarRegistros {
 			sessionFactory.close();
 		}
 	}
+
 	public static void borrarMedico(int medicoId) {
 		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
 
@@ -52,6 +53,7 @@ public class BorrarRegistros {
 
 			session.beginTransaction();
 
+			// Borrar médico con el ID del médico proporcionado
 			String deleteHql = "DELETE FROM Medicos WHERE id = :medicoId";
 			Query<?> deleteQuery = session.createQuery(deleteHql);
 			deleteQuery.setParameter("medicoId", medicoId);
