@@ -5,7 +5,8 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.context.internal.ThreadLocalSessionContext;
 import org.hibernate.engine.spi.SessionFactoryImplementor;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 public class Main {
 
 	public static void main(String[] args) {

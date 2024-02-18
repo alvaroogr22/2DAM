@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alumnos>
+    <alumno>
+        <nombre>Juan</nombre>
+        <apellido>Pérez</apellido>
+        <telefono>123456789</telefono>
+        <direccion>Calle Principal 123</direccion>
+        <cp>12345</cp>
+        <email>juan@example.com</email>
+    </alumno>
+</alumnos>
