@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.3293010752688172" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="746.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hibernate.Controller">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="478.0" prefWidth="273.0">
+         <children>
+            <MenuBar layoutY="6.0" prefHeight="30.0" prefWidth="600.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="Inicio">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Preferencias">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Ayuda">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <Label layoutX="14.0" layoutY="70.0" prefHeight="47.0" prefWidth="224.0" text="Nuevo Videojuego" textFill="#238364">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="15.0" layoutY="156.0" text="Nombre" />
+            <TextField fx:id="nombreField" layoutX="81.0" layoutY="152.0" />
+            <Label layoutX="20.0" layoutY="287.0" text="Precio" />
+            <TextField fx:id="precioField" layoutX="81.0" layoutY="275.0" />
+            <Label layoutX="9.0" layoutY="239.0" text="Compañia" />
+            <Label layoutX="13.0" layoutY="364.0" text="Plataforma" />
+            <ChoiceBox fx:id="compBox" layoutX="81.0" layoutY="235.0" prefWidth="150.0" />
+            <ChoiceBox fx:id="platBox" layoutX="81.0" layoutY="360.0" prefWidth="150.0" />
+            <Label layoutX="25.0" layoutY="194.0" text="Año" />
+            <Label layoutX="14.0" layoutY="320.0" text="Sinopsis" />
+            <TextField fx:id="añoField" layoutX="81.0" layoutY="190.0" />
+            <TextField fx:id="sinopField" layoutX="81.0" layoutY="316.0" />
+            <Button fx:id="añadirButton" layoutX="45.0" layoutY="412.0" mnemonicParsing="false" text="Añadir" />
+            <Button fx:id="borrarButton" layoutX="130.0" layoutY="412.0" mnemonicParsing="false" text="Borrar" />
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="324.0">
+         <children>
+            <Label layoutX="163.0" layoutY="51.0" text="Videojuegos" textFill="#2230c9">
+               <font>
+                  <Font size="31.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tableViewJuegos" layoutX="21.0" layoutY="124.0" prefHeight="245.0" prefWidth="454.0">
+              <columns>
+                <TableColumn fx:id="nombreColumn" prefWidth="99.0" text="Nombre" />
+                  <TableColumn fx:id="anioColumn" prefWidth="49.0" text="Año" />
+                  <TableColumn fx:id="compColumn" prefWidth="81.0" text="Compañia" />
+                  <TableColumn fx:id="precioColumn" prefWidth="50.0" text="Precio" />
+                  <TableColumn fx:id="sinopColumn" prefWidth="90.0" text="Sinopsis" />
+                  <TableColumn fx:id="platColumn" prefWidth="84.0" text="Plataforma" />
+              </columns>
+            </TableView>
+         </children></AnchorPane>
+  </items>
+</SplitPane>

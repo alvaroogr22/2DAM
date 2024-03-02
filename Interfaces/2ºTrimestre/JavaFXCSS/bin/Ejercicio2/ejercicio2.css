@@ -1,0 +1,34 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+/* Agrega estilos específicos para el nodo raíz (root) aquí */
+.pane {
+    /* Ejemplo de estilo: fondo gris claro */
+    -fx-background-color: #f0f0f0;
+}
+#labelName {
+    /* Ejemplo de estilo: texto en negrita */
+    -fx-font-weight: bold;
+     -fx-text-fill: #20e354; /* Color del texto */
+}
+#labelPassword {
+    /* Ejemplo de estilo: texto en negrita */
+    -fx-font-weight: bold;
+     -fx-text-fill: #DC143C; /* Color del texto */
+}
+#tfName {
+    -fx-font-weight: bold;
+    -fx-text-fill: #DC143C;
+    -fx-background-color: yellow; /* Color de fondo temporal para verificar la aplicación del estilo */
+}
+
+#tfPassword {
+    -fx-font-weight: bold;
+    -fx-text-fill: #20e354;
+    -fx-background-color: yellow; /* Color de fondo temporal para verificar la aplicación del estilo */
+}
+.root {
+-fx-background-color: #111;
+}
+.button {
+    /* Ejemplo de estilo: botón con borde redondeado */
+    -fx-background-radius: 25;
+}
