@@ -1,0 +1,49 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.label {
+  -fx-font-weight: bold;
+  -fx-text-fill: #483d8b;
+}
+
+.root {
+  -fx-background-color: #add8e6;
+}
+
+.button {
+  -fx-background-color: #00913f;
+  -fx-text-fill: #ffffff;
+}
+
+#titulo,
+#autor,
+#paginas {
+  -fx-background-color: #f2f2f2; /* Light Gray */
+}
+
+#tableViewEstudiante {
+  -fx-control-inner-background: #f2f2f2; /* Light Gray */
+}
+
+#tableViewEstudiante .column-header-background {
+  -fx-background-color: #00913f; /* Green */
+}
+
+#tableViewEstudiante .column-header,
+#tableViewEstudiante .table-cell {
+  -fx-background-color: #e6e6e6; /* Gray */
+  -fx-text-fill: #333; /* Dark Gray */
+}
+
+#tableViewEstudiante .column-header:hover,
+#tableViewEstudiante .table-cell:hover {
+  -fx-background-color: #d9d9d9; /* Light Gray */
+}
+
+#tableViewEstudiante .column-header .label {
+  -fx-font-size: 14pt;
+}
+
+/* Otros estilos */
+Label {
+  -fx-font-size: 16pt;
+  -fx-text-fill: #333; /* Dark Gray */
+}

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<SplitPane dividerPositions="0.40408714092924614" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="585.0" prefWidth="1039.0" stylesheets="@reto.css"
+   xmlns="http://javafx.com/javafx/21"
+   xmlns:fx="http://javafx.com/fxml/1" fx:controller="reto.Controller">
+   <items>
+      <AnchorPane prefHeight="584.0" prefWidth="373.0">
+         <children>
+            <Button id="añadir" fx:id="btnAñadir" layoutX="85.0" layoutY="389.0" mnemonicParsing="false" onAction="#agregarEstudiante" prefHeight="34.0" prefWidth="83.0" text="Añadir" />
+            <Button id="borrar" fx:id="btnBorrar" layoutX="84.0" layoutY="477.0" mnemonicParsing="false" onAction="#borrarFilaSeleccionada" prefHeight="34.0" prefWidth="83.0" text="Borrar" textFill="WHITE" />
+            <Label layoutX="208.0" layoutY="29.0" text="Nuevo Estudiante" />
+            <Label layoutX="79.0" layoutY="63.0" text="Nombre" />
+            <Label layoutX="79.0" layoutY="119.0" prefHeight="31.0" prefWidth="83.0" text="Email" />
+            <Label layoutX="77.0" layoutY="181.0" text="Telefono" />
+            <Label layoutX="78.0" layoutY="251.0" text="Curso" />
+            <Label layoutX="78.0" layoutY="310.0" text="Fecha inscripción" />
+            <TextField id="titulo" fx:id="nombreTF" layoutX="77.0" layoutY="88.0" prefHeight="26.0" prefWidth="262.0" />
+            <TextField id="autor" fx:id="correoTF" layoutX="77.0" layoutY="147.0" prefHeight="26.0" prefWidth="262.0" />
+            <TextField id="autor" fx:id="telefonoTF" layoutX="77.0" layoutY="215.0" prefHeight="26.0" prefWidth="262.0" />
+            <TextField id="paginas" fx:id="cursoTF" layoutX="77.0" layoutY="279.0" prefHeight="26.0" prefWidth="262.0" />
+            <TextField id="paginas" fx:id="fechaTF" layoutX="77.0" layoutY="339.0" prefHeight="26.0" prefWidth="262.0" />
+            <Button id="añadir" fx:id="btnMostrar" layoutX="84.0" layoutY="433.0" mnemonicParsing="false" onAction="#mostrarRegistros" prefHeight="34.0" prefWidth="83.0" text="Mostrar" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <TableView fx:id="tableViewEstudiante" layoutX="-1.0" layoutY="48.0" prefHeight="534.0" prefWidth="516.0">
+               <columns>
+                  <TableColumn fx:id="nombreColumn" prefWidth="75.0" text="nombre" />
+                  <TableColumn fx:id="correoColumn" prefWidth="87.99994659423828" text="correo" />
+                  <TableColumn fx:id="telefonoColumn" prefWidth="87.20001220703125" text="telefono" />
+                  <TableColumn fx:id="cursoColumn" prefWidth="88.79998779296875" text="curso" />
+                  <TableColumn fx:id="fechaColumn" prefWidth="159.0" text="fecha" />
+               </columns>
+            </TableView>
+            <Label layoutX="201.0" layoutY="22.0" text="Lista de estudiantes" />
+         </children>
+      </AnchorPane>
+   </items>
+</SplitPane>
